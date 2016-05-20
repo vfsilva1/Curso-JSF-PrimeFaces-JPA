@@ -28,7 +28,7 @@ public class FornecedorDataModel extends ListDataModel<Fornecedor> implements Se
 		
 		for(Fornecedor f: servico.getFornecedores())
 		   if(Integer.parseInt(rowKey) ==  f.getCodigo())
-			   return f;
+			   return servico.pesquisar(f);
 		
 		return null;
 	}

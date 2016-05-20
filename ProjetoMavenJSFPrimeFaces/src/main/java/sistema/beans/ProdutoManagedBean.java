@@ -1,5 +1,6 @@
 package sistema.beans;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -15,8 +16,12 @@ import sistema.service.ProdutoService;
 
 @ManagedBean(name = "produtoManagedBean")
 @ViewScoped
-public class ProdutoManagedBean {
+public class ProdutoManagedBean  implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Produto produto = new Produto();
 	private Fornecedor fornecedor;
 	private ProdutoService prodService = new ProdutoService();

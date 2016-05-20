@@ -51,11 +51,11 @@ public class FornecedorService {
 	public List<Produto> pesquisarProdutosFornecedor(Fornecedor fornecedor) {
 
 		List<Produto> produtos;
-
 		fornecedor = fornecedorDAO.getById(Fornecedor.class, fornecedor.getCodigo());
 		produtos = fornecedor.getProdutos();
-
 		return produtos;
 	}
+
+	
 
 }
