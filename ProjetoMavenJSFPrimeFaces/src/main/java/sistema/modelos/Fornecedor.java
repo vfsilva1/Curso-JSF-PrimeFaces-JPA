@@ -25,6 +25,11 @@ public class Fornecedor implements Serializable{
 	@OneToMany(mappedBy="fornecedor")
 	private List<Produto> produtos = new ArrayList<Produto>();
 	
+
+	@ManyToMany(mappedBy="fornecedores")
+	private List<Representante> representantes = new ArrayList<Representante>();
+	
+	
 	
 	public Fornecedor(long codigo, String nome) {
 		super();
@@ -35,6 +40,17 @@ public class Fornecedor implements Serializable{
 	public Fornecedor() {
 	}
 	
+	
+	
+	
+	public List<Representante> getRepresentantes() {
+		return representantes;
+	}
+
+	public void setRepresentantes(List<Representante> representantes) {
+		this.representantes = representantes;
+	}
+
 	public long getCodigo() {
 		return codigo;
 	}
