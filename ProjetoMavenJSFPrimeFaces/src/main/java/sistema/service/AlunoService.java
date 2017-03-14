@@ -2,12 +2,11 @@ package sistema.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import sistema.modelos.Aluno;
 
 public class AlunoService {
 
-	private ArrayList <Aluno> alunos = new ArrayList();
+	private ArrayList <Aluno> alunos = new ArrayList<Aluno>();
 	
 	public AlunoService()
 	{
