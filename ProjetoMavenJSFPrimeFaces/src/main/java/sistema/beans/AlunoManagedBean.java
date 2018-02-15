@@ -8,27 +8,6 @@ import org.primefaces.event.RowEditEvent;
 import sistema.modelos.Aluno;
 import sistema.service.AlunoService;
 
-/*
-
-
-
-
-asdasdasdasdasdasd
-asdasdasdasdasdas
-dasdasdasdasd
-*/
-
-asdas
-        das
-das
-d
-asd
-asd
-asd
-asd
-asd
-
-
 @ManagedBean
 @ViewScoped
 public class AlunoManagedBean {
