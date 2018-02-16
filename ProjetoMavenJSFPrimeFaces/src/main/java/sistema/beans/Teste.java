@@ -10,5 +10,11 @@ package sistema.beans;
  * @author Glauco Todesco
  */
 public class Teste {
-    
+/*	as
+	das
+	dsa
+	das
+	dasd
+	as
+  */  
 }
