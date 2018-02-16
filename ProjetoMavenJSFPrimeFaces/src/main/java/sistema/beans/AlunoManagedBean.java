@@ -7,7 +7,7 @@ import org.primefaces.event.RowEditEvent;
 
 import sistema.modelos.Aluno;
 import sistema.service.AlunoService;
-
+//teste 1
 @ManagedBean
 @ViewScoped
 public class AlunoManagedBean {
