@@ -1,0 +1,66 @@
+<ui:composition template="templateMenu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets">
+	
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroProfessor.title']}"/>
+	</ui:define>
+	
+	<ui:define name="principal">
+	
+		<h1><p:outputLabel value="#{msg['pages.cadastroProfessor.menu']}"/></h1>
+		
+		<h:form id="formProfessor">
+		
+			<p:panelGrid columns="2">
+				
+				<p:outputLabel value="#{msg['pages.cadastroProfessor.nome']}"/>
+				<p:inputText value="#{professorManagedBean.prof.nome}"/>
+								
+				<p:outputLabel value="#{msg['pages.cadastroProfessor.cpf']}"/>
+				<p:inputText value="#{professorManagedBean.prof.cpf}"/>
+				
+				<p:outputLabel value="#{msg['pages.cadastroProfessor.salario']}"/>
+				<p:inputText value="#{professorManagedBean.prof.salario}"/>
+			</p:panelGrid>
+		
+		<p:commandButton value="#{msg['pages.cadastroProfessor.btnSalvar']}"
+						 action="#{professorManagedBean.salvar}"
+						 update=":formProfessor, tabelaProfessor"/>
+		</h:form>
+	
+		<p:dataTable value="#{professorManagedBean.professores}"
+					 var="aux"
+					 id="tabelaProfessor"
+					 editable="true"
+					 editMode="cell">
+			
+			<p:column headerText="#{msg['pages.cadastroProfessor.nome']}">
+				<p:cellEditor>
+					<f:facet name="output"><p:outputLabel value="#{aux.nome}"/> </f:facet>
+					<f:facet name="input"><p:inputText value="#{aux.nome}" style="width:96%"/></f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="#{msg['pages.cadastroProfessor.cpf']}">
+				<p:cellEditor>
+					<f:facet name="output"><p:outputLabel value="#{aux.cpf}"/> </f:facet>
+					<f:facet name="input"><p:inputText value="#{aux.cpf}" style="width:96%"/> </f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="#{msg['pages.cadastroProfessor.salario']}">
+				<p:cellEditor>
+					<f:facet name="output"><p:outputLabel value="#{aux.salario}"/> </f:facet>
+					<f:facet name="input"><p:inputText value="#{aux.salario}" style="width:96%"/> </f:facet>
+				</p:cellEditor>
+			</p:column>
+		
+		</p:dataTable>
+	</ui:define>
+</ui:composition>

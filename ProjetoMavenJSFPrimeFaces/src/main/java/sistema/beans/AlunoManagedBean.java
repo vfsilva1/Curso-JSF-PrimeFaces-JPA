@@ -33,9 +33,4 @@ public class AlunoManagedBean {
 	public List<Aluno> getAlunos() {
 		return service.getAlunos();
 	}
-
-	
-	
-	
-
 }
